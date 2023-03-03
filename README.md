@@ -5,3 +5,4 @@ Learning web development with the udemy web development bootcamp 2023 course by 
 - [DiceeChallenge](https://github.com/anupdsouza/WebDevelopmentBootcamp/tree/main/DiceeChallenge)
 - [DrumKit](https://github.com/anupdsouza/WebDevelopmentBootcamp/tree/main/DrumKit)
 - [jQuery](https://github.com/anupdsouza/WebDevelopmentBootcamp/tree/main/jQuery)
+- [SimonGameChallenge](https://github.com/anupdsouza/WebDevelopmentBootcamp/tree/main/SimonGame)
