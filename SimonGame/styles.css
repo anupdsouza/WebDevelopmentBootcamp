@@ -17,6 +17,10 @@ body {
 
 }
 
+.failedImage {
+  visibility: hidden;
+}
+
 .btn {
   margin: 25px;
   display: inline-block;
