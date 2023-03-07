@@ -1,0 +1,14 @@
+{
+  "name": "calculatorwebapp",
+  "version": "1.0.0",
+  "description": "This is a calculator web app challenge project.",
+  "main": "calculator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anup DSouza",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
