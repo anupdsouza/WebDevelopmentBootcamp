@@ -5,14 +5,14 @@ const request = require('request');
 const https = require('https');
 const { url } = require('inspector');
 const app = express();
-const listId = ""
-const apiKey = "-us8"
+const listId = "f127ae0c9c"
+const apiKey = "396c4c9f547985a73e16cbd1e59d6f1f-us8"
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use(express.static("public"));
 
 const port = 3000;
-app.listen(port, function () {
+app.listen(process.env.port || port, function () {
     console.log(`Server running on http://localhost:${port}`)
 })
 
