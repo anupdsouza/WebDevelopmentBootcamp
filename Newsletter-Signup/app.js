@@ -6,6 +6,7 @@ const https = require('https');
 const { url } = require('inspector');
 const app = express();
 const listId = ""
+const apiKey = "-us8"
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use(express.static("public"));
@@ -42,19 +43,19 @@ app.post("/", function (req, res) {
     const url = `https://us8.api.mailchimp.com/3.0/lists/${listId}`
     const options = {
         method: "POST",
-        auth: "auth:-us8"
+        auth: `auth:${apiKey}`
     }
     const request = https.request(url, options, function (response) {
-
-        if(response.statusCode !== 200) {
-            console.log("error")
-            res.sendFile(__dirname + "/failure.html")
-        } else {
-            console.log("success")
-            res.sendFile(__dirname + "/success.html")
-        }
-        response.on('data', function (data) {
-            console.log(JSON.parse(data))
+        
+        response.on('data', function (data) {            
+            const jsonResponse = JSON.parse(data)
+            console.log(`response.statusCode: ${response.statusCode} && error_count: ${jsonResponse.error_count}`)
+            if(response.statusCode === 200 && jsonResponse.error_count === 0) {
+                res.sendFile(__dirname + "/success.html")
+            } else {
+                res.sendFile(__dirname + "/failure.html")
+            }
+            
         })
     })
 
@@ -62,3 +63,6 @@ app.post("/", function (req, res) {
     request.end()
 })
 
+app.post("/failure", function (req, res) {
+    res.redirect("/")
+})
