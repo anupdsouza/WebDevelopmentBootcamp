@@ -13,6 +13,17 @@
     <% } else { %>
         <h1 style="color: orange"><%= kindOfDay %> List</h1>
     <% } %>
+    <ul>
+        <% for(var i=0; i < todoListItems.length; i++) { %>
+            <li>
+                <%= todoListItems[i] %>
+            </li>
+        <% } %>
+    </ul>
+    <form action="/" method="post">
+        <input type="text" name="newListItem" id="">
+        <button type="submit" name="button">Add Item</button>
+    </form>
     
 </body>
 </html>
