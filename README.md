@@ -11,3 +11,7 @@ Learning web development with the udemy web development bootcamp 2023 course by 
 - [WeatherProject](https://github.com/anupdsouza/WebDevelopmentBootcamp/tree/main/WeatherProject)
 - [Introduction to Express](https://github.com/anupdsouza/WebDevelopmentBootcamp/tree/main/my-express-server)
 - [Newsletter Signup](https://github.com/anupdsouza/WebDevelopmentBootcamp/tree/main/Newsletter-Signup)
+
+
+Note: This repo will eventually be archived as the course was updated for 2023. The new repo can be found [here](https://github.com/anupdsouza/Web-UdemyWebDevelopmentBootcamp2023).
+Sections that have not been changed will be copied over to the new repo.
